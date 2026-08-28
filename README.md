@@ -32,6 +32,33 @@ Built for a Frontend Internship take-home (Study Assistant option).
 - 💾 **Sessions** — autosaved to `localStorage`, browse/reload/delete from the sidebar
 - 🌓 **Dark/light theme**, mobile-first responsive layout
 
+## How It Works
+
+```mermaid
+flowchart LR
+    U["👤 User"] -->|"notes / topic"| IP["InputPanel"]
+    IP -->|"POST /api/study-kit\n(or /stream)"| SRV["Express server"]
+    SRV -->|"prompt + responseSchema"| GEM["Gemini API"]
+    GEM -->|"JSON (or SSE deltas)"| SRV
+    SRV -->|"Zod validate"| CHK{"Valid?"}
+    CHK -->|"no → retry w/ error"| GEM
+    CHK -->|"yes"| OUT["Validated Study Kit"]
+    OUT --> UI["Workspace\nFlashcards · Quiz · Checklist · Chart"]
+    UI --> LS[("localStorage\nsessions")]
+    UI -->|"refine instruction"| SRV
+
+    style GEM fill:#dd8452,color:#17130d
+    style CHK fill:#241f18,color:#f3efe6
+```
+
+**Flow, in words:**
+
+1. User submits notes/topic → client hits the Express proxy (never Gemini directly)
+2. Server prompts Gemini with a strict `responseSchema`
+3. Response is Zod-validated — invalid output triggers a retry with the specific error fed back into the next prompt
+4. Validated kit streams/returns to the client and renders as flashcards, quiz, checklist & chart
+5. Every generation/refinement autosaves to `localStorage`; refinements loop back through the same validate → retry pipeline
+
 ## Why a backend, for a "frontend" task?
 
 The Gemini API key can't be shipped to the browser (network tab = instantly stolen). The Express server is the minimum viable proxy: routing, Zod validation, retry-with-repair on bad model output. All product logic (UI, state, interactivity) lives in the client.
