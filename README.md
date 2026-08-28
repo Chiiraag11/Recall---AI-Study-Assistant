@@ -4,7 +4,7 @@ Paste in notes (or just a topic), get back an interactive study kit: flashcards,
 
 Built for a Frontend Internship take-home (Study Assistant option).
 
-**Live demo:** _[add deployed URL here]_
+**Live demo:** https://recall-ai-study-assistant-client.vercel.app
 
 **Demo video:** _[add video link here]_
 
