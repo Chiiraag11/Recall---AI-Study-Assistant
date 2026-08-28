@@ -1,0 +1,24 @@
+{
+  "name": "study-assistant",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AI study assistant - paste notes, get an interactive flashcard deck, quiz, concept checklist, and confidence chart.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "concurrently -k -n SERVER,CLIENT -c blue,green \"npm run start -w server\" \"npm run dev -w client\"",
+    "dev": "npm run start",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "test": "npm run test -w client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
