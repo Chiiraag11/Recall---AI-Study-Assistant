@@ -5,12 +5,12 @@
 
 <p align="center">
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Open_Recall-111827?style=for-the-badge)](YOUR_DEPLOYED_APP_LINK)
-[![Demo Video](https://img.shields.io/badge/🎥_Demo-Watch_Video-7C3AED?style=for-the-badge)](YOUR_VIDEO_LINK)
+**Live Demo:** YOUR_DEPLOYED_APP_LINK
+
+**Demo Video:** YOUR_VIDEO_LINK
 
 </p>
 
----
 ---
 
 <p align="center">
