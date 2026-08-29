@@ -6,7 +6,7 @@ Built for a Frontend Internship take-home (Study Assistant option).
 
 **Live demo:** https://recall-ai-study-assistant-client.vercel.app
 
-**Demo video:** _[add video link here]_
+**Demo video:**  https://drive.google.com/file/d/1FekLl1vlwArU-j1f3fKs5t6-4TB9KK1c/view?usp=sharing
 
 ---
 
