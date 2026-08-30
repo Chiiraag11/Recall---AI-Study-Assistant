@@ -35,6 +35,8 @@ Built for a Frontend Internship take-home (Study Assistant option).
 | Persistence | `localStorage` (sessions, theme) — no DB |
 | Testing | Vitest (streaming JSON parser unit tests) |
 
+---
+
 ## Features
 
 - 🔁 **Flashcards** — flip, shuffle, full keyboard control (`← →` move, `space` flip)
