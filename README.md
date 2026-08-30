@@ -16,10 +16,10 @@ Built for a Frontend Internship take-home (Study Assistant option).
 ### Dashboard
 ![Dashboard](./screenshots/dashboard.png)
 
-### Matching Engine
+### Flashcard
 ![Flashcard](./screenshots/matching.png)
 
-### Results
+### Quiz
 ![Quiz](./screenshots/results.png)
 
 ---
