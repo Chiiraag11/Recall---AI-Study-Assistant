@@ -8,6 +8,17 @@ Built for a Frontend Internship take-home (Study Assistant option).
 
 **Demo video:**  https://drive.google.com/file/d/1FekLl1vlwArU-j1f3fKs5t6-4TB9KK1c/view?usp=sharing
 
+## Screenshots
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Matching Engine
+![Matching Engine](./screenshots/matching.png)
+
+### Results
+![Results](./screenshots/results.png)
+
 ---
 
 ## Tech Stack
