@@ -7,8 +7,7 @@ import {
 
 const MODEL = process.env.GEMINI_MODEL || "gemini-3.6-flash";
 const REQUEST_TIMEOUT_MS = Number(process.env.GEMINI_TIMEOUT_MS || 30000);
-const MAX_ATTEMPTS = 3; // 1 initial try + 2 repair retries
-
+const MAX_ATTEMPTS = 3; 
 let client = null;
 function getClient() {
   if (!process.env.GEMINI_API_KEY) {
@@ -24,7 +23,7 @@ function getClient() {
   return client;
 }
 
-/** Strips ```json ... ``` fences the model sometimes adds despite instructions not to. */
+
 function stripCodeFences(text) {
   return text
     .trim()

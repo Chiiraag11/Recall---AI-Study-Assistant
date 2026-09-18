@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod"; //runtime data validationnnn
 
 /**
  * This is the single source of truth for the shape of a "Study Kit".

@@ -26,6 +26,7 @@ app.use(express.json({ limit: "200kb" }));
 // work across multiple server instances.
 const WINDOW_MS = 60_000;
 const MAX_REQUESTS_PER_WINDOW = 20;
+
 const hits = new Map();
 function rateLimit(req, res, next) {
   const key = req.ip;

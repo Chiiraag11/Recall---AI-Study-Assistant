@@ -11,6 +11,8 @@ import { saveSession } from "../lib/storage";
  *  - "success"   have a validated study kit
  *  - "error"     last request failed; `error` has a user-facing message
  */
+
+
 export function useStudyKitGenerator({ streaming = true } = {}) {
   const [status, setStatus] = useState("empty");
   const [studyKit, setStudyKit] = useState(null);
